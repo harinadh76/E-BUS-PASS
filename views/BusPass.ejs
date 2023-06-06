@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Pass Design</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bus-pass {
+      max-width: 400px;
+      margin: 10% auto;
+      background-color: bisque;
+      
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+   
+.bus-pass-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .bus-pass-header h2 {
+      color: #333;
+      margin: 0;
+    }
+
+    .bus-pass-content {
+      background-color: #fff;
+      color: #393a61;
+      padding: 10px;
+      border-radius: 5px;
+
+      margin-bottom: 10px;
+    }
+
+    .bus-pass-content label {
+      font-weight: 400;
+    }
+
+.bus-pass-content input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .bus-pass-footer {
+      text-align: center;
+    }
+
+    .bus-pass-footer button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    span .cls{
+      margin-right: 10px;
+    }
+    span{
+      margin-left: 60px;
+      display: table-cell;
+    width: 150px;
+    }
+@media screen and (max-width: 500px) {
+      .bus-pass {
+        max-width: 85%;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="bus-pass">
+    <div class="bus-pass-header">
+      <h2>Bus Pass</h2>
+    </div>
+
+    <div class="bus-pass-content">
+       <label for="name"><span class="scls">Name:</span> <span><%= data.fname%> <%= data.lname%></span></label> <br>
+       
+       
+      <label for="id"><span class="scls">Bus Id:</span><span><%= data._id%></span></label> <br>
+      <label for="year"><span class="scls">Year:</span><span><%= data.year%></span></label> <br>
+      <label for="branch"><span class="scls">Branch:</span><span><%= data.branch%></span></label><br>
+      <label for="route"><span class="scls">Route:</span><span><%= data.route%></span></label><br>
+      <label for="rollno"><span class="scls">Roll Number:</span><span><%= data.rollno%></span></label><br>
+      <label for="busno"><span class="scls">Bus Number:</span><span><%= data.busno%></span></label><br>
+
+      <label for="date"><span class="scls">Valid Until:</span><span><%= data.datevalid%></span></label>
+     
+    </div>
+    
+  </div>
+  <center>
+  <a href="/">Back to home</a>
+  </center>
+</body>
+</html>

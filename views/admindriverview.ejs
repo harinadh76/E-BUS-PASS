@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bus Pass</title>
+    <link rel="icon" href="logo.jpg" type="image/gif"/>
+    
+
+   
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto+Mono:ital,wght@0,100;1,200&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .pricing-column {
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+        }
+
+        .card {
+            border: 2px solid #02fee5;
+            
+
+        }
+
+        .card-header {
+            background-color: #02fee5;
+            
+
+        }
+
+        .one {
+            transition: 1s;
+            box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+            text-align: center;
+
+        }
+
+        .one:hover {
+            transform: scale(1.3);
+            z-index: 2;
+        }
+
+        .two {
+            transition: 0.5s;
+
+            color: #fff;
+            text-shadow: 0 0 10px #02fee5,
+                0 0 10px #02fee5,
+                0 0 20px #02fee5,
+                0 0 30px #02fee5,
+                0 0 40px #02fee5;
+        }
+
+      
+        .card-body{
+            background-color: #163b55;
+        }
+        p{
+            color: white;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            text-shadow: 0 0 10px #163b55,
+                0 0 10px #163b55,
+                0 0 20px #163b55,
+                0 0 30px #163b55,
+                0 0 40px #163b55;
+            
+        }
+        img{
+            text-align: center;
+            border-radius: 50%;
+        }
+       
+
+
+        .card {
+            transition: 1s;
+            box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+            text-align: center;
+
+        }
+@media (max-width:600px){
+    .card{
+        margin: 5%;
+    }
+}
+        
+        .subbtn{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .subbtn button{
+            margin: 20px;
+            width: 100px;
+            height: 45px;
+            border-radius: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+
+    <section id="driver">
+
+        <h1 class="two" style="text-align: center; margin: 20px;"> Driver Details</h1>
+        <div class="row">
+           <% for(var i=0;i<data.length;i++) {%>
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>ID: <%= data[i].id %></h3>
+                    </div>
+                    <div class="card-body">
+                        <img class="one" src="<%= data[i].photo %>" width="70px" alt="driver">
+                        <p>Name: <%= data[i].name %></p>
+                        <p>Phone No: <%= data[i].phone%></p>
+                        <p>Bus No: <%= data[i].busno %></p>
+                        <p>Route: <%= data[i].route %></p>
+                    
+                    <div class="subbtn">
+                    <form action="/updriver/<%=data[i]._id%>" method="post">
+                        <button>Update</button>
+                    </form>
+                    <form action="/deldriver/<%=data[i]._id%>" method="post">
+                        <button>Delete</button>
+                    </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+           <% } %>
+            
+        </div>
+    </section>
+</body>
+
+</html>

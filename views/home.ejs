@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>E-Bus Pass</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="logo.jpeg" type="image/gif" />
+    
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+        <link rel="icon" href="logo.jpg" type="image/gif" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+</head>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    <% if(l==0) { %>
+        <script>
+            
+            swal({
+                title: "Please Login First ",
+                text: "To Continue",
+                timer: 5000
+            });
+            l=1
+        </script>
+        <% } %>
+            <header>
+                <!-- header inner -->
+                <div class="head_top">
+                    <div class="header">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                                    <div class="full">
+                                        <div class="center-desk">
+                                            <div class="logo">
+                                                <!-- <a href="/"><img src="images/logo.png" alt="#" /></a> -->
+                                                <a class="nav-link" href="/" style="color: #02fee5;"> E-Bus Pass</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                                    <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                            data-target="#navbarsExample04" aria-controls="navbarsExample04"
+                                            aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                                            <ul class="navbar-nav mr-auto">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="/"> Home </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="/driverdetails">DriverDetails</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="/team">Our Team</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="/contact" target="_blank">Contact</a>
+                                                </li>
+                                                <% var main_data=main %>
+                                                    <% var Currentuser=JSON.parse(localStorage.getItem(main)) %>
+                                                        <% if(Currentuser==null) { %>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/login">Login</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/sturegis">Sign-Up</a>
+                                                            </li>
+                                                            <% } %>
+                                                                <% if(Currentuser!=null) { %>
+                                                                    <li><a href="/viewprofile" class="nav-link">
+                                                                            <%= Currentuser.username %>
+                                                                        </a></li>
+                                                                    <li>
+                                                                        <a href="/logout" class="nav-link">
+                                                                            Logout
+                                                                        </a>
+                                                                    </li>
+                                                                    <% } %>
+
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end header inner -->
+                    <!-- end header -->
+                    <!-- banner -->
+                    <section class="banner_main">
+                        <div class="container">
+                            <div class="row d_flex">
+                                <div class=" col-xl-8 col-lg-8 col-md-8 col-12-9">
+                                    <div class="text-bg">
+                                        <h1>E-bus Pass<br> <span class="white1">Registration and Renewal</span></h1>
+                                        <p> E-Bus pass Registration and Renewal is
+                                            useful for the
+                                            students
+                                            who are facing problems with the current manual work of bus pass
+                                            Registration
+                                            and
+                                            renewal in colleges.
+                                            This online bus pass registration application will help students save their
+                                            time and renewal bus
+                                            passes without standing in a line for hours near counters in colleges.
+                                            Initially
+                                            students need to
+                                            register
+                                            with the application by submitting details of address proof, and required
+                                            details and submit
+                                            through
+                                            online. They will verify your details and if they are satisfied they will
+                                            approve
+                                            bus pass. </p>
+                                        <% if(Currentuser!=null) { %>
+                                            <a href="/Renewal">Renewal</a>&nbsp;&nbsp;
+                                            <a href="/busregister">New-BusPass-Register</a>
+                                            <% } %>
+                                                <% if(Currentuser==null) { %>
+                                                    <a href="/alert">Renewal</a>&nbsp;&nbsp;
+                                                    <a href="/alert">New-BusPass-Register</a>
+                                                    <% } %>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-12-3">
+                                    <div class="text-img">
+                                        <!-- <figure><img src="images/box_im.png" alt="#"/></figure> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </header>
+            <!-- end banner -->
+            <!-- blog_main -->
+            <!-- fist section -->
+
+            <!-- end fist section -->
+            <!-- secend section -->
+
+            <!-- end secend section -->
+
+            <!-- three section -->
+
+            <!-- end three section -->
+
+            <!-- for section -->
+
+            <!-- end Testimonial -->
+
+            <!--  footer -->
+            <footer>
+                <div class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <div class="cont">
+                                    <h3> <strong class="multi"><a href="#">E-Bus Pass Registration and
+                                                Renewal</a></strong><br>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <ul class="social_icon">
+                                    <li><a href="https://www.facebook.com/profile.php?id=100090794153191"><i
+                                                class="fa fa-facebook" aria-hidden="true" id="q"></i></a></li>
+                                    <li><a href="https://twitter.com/Prempk2929"><i class="fa fa-twitter"
+                                                aria-hidden="true" id="w"></i></i></a></li>
+                                    <li><a href="https://www.instagram.com/prem._.pkk/"><i class="fa fa-instagram"
+                                                aria-hidden="true" id="w"></i></i></a></li>
+                                    <!-- <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true" id="qw"></i></i></a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>© 2023 All Rights Reserved.
+                                        <!-- <a href="https://html.design/"> Free Html Templates</a>-->
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+            <!-- Javascript files-->
+            <script src="js/jquery.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <script src="js/jquery-3.0.0.min.js"></script>
+
+            <!-- sidebar -->
+            <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+            <script src="js/custom.js"></script>
+            <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+ <html>
+    <head>
+        <title>Contact</title>
+        <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>E-Bus Pass</title>
+    <link rel="icon" href="logo.jpg" type="image/gif"/>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+    <body>
+   
+    
+
+ <!-- contact -->
+ <div id="contact" class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Contact us</h2>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <form class="main_form " action="">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <input class="name" placeholder="Name "  type="text" required name="Name ">
+                        </div>
+                        <div class="col-md-12">
+                            <input class="phone" placeholder="Phone Number"  type="text" required name=" Phone Number">
+                        </div>
+                        <div class="col-md-12">
+                            <input class="email" placeholder="Email"  type="text" required name="Email">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="textarea" placeholder="Message"  type="text" required name="Message"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                            <% var main_data=main %>
+                            <% var Currentuser=JSON.parse(localStorage.getItem(main)) %>
+                                <% if(Currentuser==null) { %>
+                            <button class="send" onclick="alert('Please Login to send message')">Send</button>
+                            <%} %>
+                            <% if(Currentuser!=null) { %>
+                            <button class="send_btn">Send</button>
+                            <% } %>
+                        </div>
+                    </div>
+                </form>
+                <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script type="text/javascript">
+                (function () {
+                    emailjs.init('tJInPg9a1pTj6kTVC');
+                })();
+            </script>
+            <script src="js/script.js"></script>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end contact -->
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bus Pass</title>
+    <link rel="icon" href="logo.jpg" type="image/gif"/>
+</head>
+
+<style>
+    .a {
+        text-align: center;
+        color: black;
+        font-size: 30px;
+
+    }
+
+    .b {
+        background-color: greenyellow;
+        margin: 80px;
+        padding: 60px;
+        border-radius: 15px;
+
+    }
+
+    .c{
+        padding: 5px;
+        
+        position: relative;
+        top: -70px;
+    }
+
+
+    table {
+        font-family: arial, sans-serif;
+       border: 1px solid black;
+       border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        
+        text-align: left;
+        
+        border: 1px solid black;
+        padding: 8px;
+    }
+
+  
+</style>
+
+<body>
+
+
+    <% if(dataa !=null) { %>
+
+
+        <% dataa.forEach(async function(item){ %>
+
+            <div class="b">
+
+
+                <div class="a">
+                    VIGNAN'S INSTITUTE OF INFORMATION TECHNOLOGY
+                </div> <br><br>
+                <center class="a">Bus Pass</center>
+                <table class="c" >
+                
+                <tr>
+                    <td>Pass id</td>
+                    <td>
+                        <%= item._id%>
+                    </td><br>
+                </tr>
+
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <%= item.Name%>
+                    </td><br>
+                </tr>
+
+                <tr>
+                    <td>Year</td>
+                    <td>
+                        <%= item.Year%>
+                    </td><br>
+                </tr>
+                <tr>
+                    <td>Branch</td>
+                    <td>
+                        <%= item.Branch%>
+                    </td><br>
+                </tr>
+
+                <tr>
+                    <td>Roll no</td>
+                    <td>
+                        <%= item.rollno%>
+                    </td><br>
+                </tr>
+
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <%= item.Email%>
+                    </td><br>
+                </tr>
+                <tr>
+                    <td>Boarding At</td>
+                    <td>
+                        <%= item.Route%>
+                    </td><br>
+                </tr>
+
+               
+                <tr>
+                    <td>Bus No</td>
+                    <td>
+                        <%= item.busno%>
+                    </td><br>
+                </tr>
+                <tr>
+                    <td>Validity</td>
+                    <td>
+                        Six Months
+                    </td><br>
+                </tr>
+                </table>
+
+
+
+            </div>
+
+
+            <% }) %>
+
+                <% } %>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>E-Bus Pass</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            scroll-padding-top: 2rem;
+        }
+
+        :root {
+            --main-color: bisque;
+            --body-color: #e7e6c2;
+            --container-color: #171b3c;
+            --heading-color: #222321;
+            --box-color: #0d0f26;
+            --bg-color: #fff;
+        }
+
+        .profiles-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        @media (max-width:600px) {
+          .profiles-content{
+    
+        grid-template-columns: 1fr;
+        margin: 4%;
+          
+    }
+        }
+        .profiles-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 15px;
+            background-color: var(--main-color);
+            border-radius: 0.4rem;
+            transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .profiles-box .bx {
+            font-size: 1.4rem;
+            color: var(--main-color);
+            padding: 10px;
+            border-radius: 5rem;
+            border: 2px dashed var(--bg-color)
+        }
+
+        .profiles-box:hover {
+            transform: scale(1.05);
+            transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .profiles-image {
+            width: 190px;
+            height: 190px;
+            border-radius: 80%;
+        }
+        span .cls{
+      margin-right: 10px;
+      text-align: left;
+    }
+    span{
+      margin-left: 60px;
+      display: table-cell;
+      text-align: -webkit-left;
+    width: 150px;
+    }
+    .subcls{
+      display: flex;
+    }
+
+    .subcls button{
+      margin: 5px;
+      width: 100px;
+      height: 35px;
+      font-weight: 400;
+      border-radius: 12px;
+    }
+    .accept{
+      background-color: green;
+      color: #fff;
+    }
+    .reject{
+      background-color: red;
+      color: #fff;
+    }
+    .subcls button:hover{
+      cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="profiles container" id="profiless">
+        <center>
+            <h2 class="heading">Bus Pass Registrations</h2><br>
+        </center>
+        <div class="profiles-content">
+            <% for(var i=0;i<data.length;i++) {%>
+            <div class="profiles-box rgb">
+                <p><span class="scls">Name:</span><span> <%= data[i].fname %>
+                        <%= data[i].lname%></span>
+                </p>
+                <p><span class="scls">Phone No:</span><span><%= data[i].phno%></span>
+                </p>
+                <p><span class="scls">Bus No:</span><span><%= data[i].busno %></span>
+                </p>
+                <p><span class="scls">Route:</span><span><%= data[i].route %></span>
+                </p>
+                <p><span class="scls">Year: </span><span><%= data[i].year %></span></p>
+                <p><span class="scls">Branch:</span><span><%=data[i].branch %></span></p>
+                <p><span class="scls">Roll no:</span><span><%=data[i].rollno %></span></p>
+                <p><span class="scls">Address:</span> <span><%=data[i].address %></span></p>
+                <p><span class="scls">Date Valid:</span><span><%=data[i].datevalid %></span></p>
+                
+                <div class="subcls">
+                <% if(data[i].isAvailable == false) { %>
+                    <form action="/accept/<%=data[i]._id%>" method="post">
+                        <button class="accept">Accept</button>
+                    </form>
+                    <form action="/reject/<%=data[i]._id%>" method="post">
+                        <button class="reject">Reject</button>
+                <% } %>
+                <% if(data[i].isAvailable == true) { %>
+            
+                    <h4>Accepted</h4>
+                <% } %>
+                </div>
+                <hr style="width: 100%;">
+            </div>
+            <% } %>
+        </div>
+        
+    </section>
+</body>
+
+</html>

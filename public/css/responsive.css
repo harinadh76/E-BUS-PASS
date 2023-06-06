@@ -1,0 +1,194 @@
+
+
+/*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+   
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .awesome {font-size: 19px;  padding-bottom: 20px; line-height: 25px;}
+  .padding_flot {font-size: 17px; padding-bottom: 0px;  line-height: 25px;}
+  .our_text_box p {padding-bottom: 15px; padding-bottom: 15px; font-size: 16px;
+
+line-height: 25px;}
+  ul.padding_left2 li img {padding: 0px 5px 0px 11px;}
+  .flot_left1 {font-size: 14px;}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        padding: 0 14px;
+    }
+    .our_text_box {
+    padding: 20px;
+}
+.hiuouh {padding-bottom: 25px !important;}
+.padding_bottom1 {
+
+    padding-bottom: 30px;
+
+}
+    .Testimonial_box p ,.Testimonial_box h4 ,.Testimonial .titlepage {padding-left: 60px;}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .head_top {
+        background: url(../images/banner1.png);
+    }
+    .mean-container .mean-bar {
+        margin-top: 0px;
+    }
+    .text-bg h1 {
+        font-size: 50px;
+        line-height: 80px;
+    }
+    .text-bg {
+        padding-right: 0;
+    }
+   .text-img {
+
+    text-align: center;
+
+}
+.banner_main {
+    padding: 30px 0 90px 0;
+}
+.he_img {
+    height: 496px;
+}
+.Testimonial_box i::after {content: inherit;}
+.padding_bottom1 {padding-bottom: 30px;}
+.padding_bottom2 {padding-bottom: 30px;}
+.our_text_box { padding: 20px;}
+ul.padding_left2 li img {padding: 0px 10px 0px 19px;}
+.Testimonial_box h4 {padding-top: 30px;}
+.Testimonial .titlepage {
+    text-align: center;
+    padding-bottom: 50px;
+}
+   .main_form {margin:0; padding: 50px 20px;}
+
+    .navigation.navbar {
+        float: right;
+        display: inherit !important;
+        padding: 0;
+        width: 100%;
+    }
+    .navigation .navbar-collapse {
+        background: #02fee5;
+        padding: 20px;
+        margin-top: 46px;
+        position: absolute;
+        width: 100%;
+        margin-right: 20px;
+        z-index: 999;
+    }
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        color: #000;
+    }
+    .navigation.navbar-dark .navbar-toggler {
+        border: inherit;
+        float: right;
+        padding-top: 6px;
+    }
+    .navigation.navbar-dark .navbar-toggler-icon {
+        background: url(../images/menu_icon.png);
+        background-repeat: no-repeat;
+    }
+  
+}
+
+@media (max-width: 575px) {
+    .head_top {
+       background: url(../images/banner1.png);
+    }
+    .header {
+        padding: 30px 0px 0px 0px;
+    }
+    .logo {
+        text-align: center !important;
+        padding-bottom: 6px;
+        float: left;
+    }
+    .text-bg h1 {
+        font-size: 33px;
+        line-height: 51px;
+    }
+    .banner_main {
+    padding: 30px 0 90px 0;
+}
+.text-img {
+
+    text-align: center;
+
+}
+    .cont h3 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+    ul.withi_color {padding-left: 4px;}
+.padding_bottom2 {padding-bottom: 30px;}
+    .he_img {
+   height: 600px;
+}
+.Testimonial_box i::after {content: inherit;}
+
+.padding_top3 {padding-top: 20px;}
+.pa_wi {padding-top: 20px; font-size: 19px; padding-bottom: 15px;}
+.our_text_box {padding: 1px 5px 52px 5px;}
+     .padding_flot {
+
+font-size: 19px;
+line-height: 36px;
+
+}
+ul.like li img {
+    padding: 0px 5px 0px 8px;
+}
+.flot_left1 {font-size: 14px;}
+    .Testimonial_box h4 {padding-top: 30px;}
+   .Testimonial .titlepage {
+    text-align: center;
+    padding-bottom: 50px;
+}
+   .main_form {margin:0; padding: 50px 20px;}
+    .navigation.navbar {
+        float: right;
+        display: inherit !important;
+        padding: 0;
+        width: 100%;
+        margin-top: -45px;
+    }
+    .navigation .navbar-collapse {
+        background: #02fee5;
+        padding: 20px;
+        margin-top: 46px;
+        position: absolute;
+        width: 100%;
+        margin-right: 20px;
+        z-index: 999;
+    }
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        color: #000;    
+    }
+    .navigation.navbar-dark .navbar-toggler {
+        float: right;
+        margin-right: 2px;
+        border: inherit;
+    }
+    .testimonial_box {
+        padding: 0px 19px 40px 20px;
+    }
+    .navigation.navbar-dark .navbar-toggler-icon {
+        background: url(../images/menu_icon.png);
+        background-repeat: no-repeat;
+    }
+}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bus Pass</title>
+    <link rel="icon" href="logo.jpg" type="image/gif"/>
+    <style>
+        body{
+            background-image: linear-gradient(to right,#393a61,#6cebd5);
+            align-items: center;
+            justify-items: center;
+        }
+        .recls{
+            
+            margin-top: 10%;
+        }
+        .inpcls{
+            width: 180px;
+            height: 30px;
+            color: #393a61;
+            border: 1px solid #393a61;
+            font-weight: 700;
+            font-size: medium;
+            border-radius: 10px;
+        }
+        .subcls{
+            
+            width: 150px;
+            height: 30px;
+            border: 1px solid #393a61;
+            border-radius: 10px;
+            color: #393a61;
+            margin: 5px;
+            font-weight: bold;
+        }
+        .subcls:hover{
+            background-color: #393a61;
+            color: white;
+            cursor: pointer;
+        }
+        h2{
+            color: white;
+            margin-top: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <h2>Enter Roll No. To Proceed</h2>
+    <div class="recls">
+        
+    <form action="/passrenewal" method="post">
+        <input class="inpcls" required type="text" placeholder="Enter Rollno" name="rollno"><br><br>
+
+        <input class="subcls" type="submit" value="Submit">
+    </form>
+
+
+    </div>
+    </center>
+
+</body>
+</html>

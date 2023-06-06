@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>E-Bus Pass</title>
+      <link rel="icon" href="logo.jpg" type="image/gif"/>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css --> 
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto+Mono:ital,wght@0,100;1,200&display=swap"
+        rel="stylesheet">
+    <style>
+        .button-33 {
+            background-color: #c2fbd7;
+            border-radius: 100px;
+            box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+            color: green;
+            cursor: pointer;
+            display: inline-block;
+            font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-33:hover {
+            box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+            transform: scale(1.05) rotate(-1deg);
+        }
+
+        /* internal css */
+        li {
+            display: inline;
+            text-decoration: none;
+            font-size: 24px;
+
+        }
+
+        .a {
+            background-color: #7845ca;
+        }
+
+        .title {
+            font-size: 44px;
+            text-decoration: none;
+            padding-left: 150px;
+            color: white;
+            font-family: 'Kdam Thmor Pro', sans-serif;
+        }
+
+        .title:hover {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .b {
+            margin-top: 45px;
+            margin-left: 30px;
+            /* display: inline;  */
+
+        }
+
+        .c {
+            float: right;
+            margin-top: 200px;
+            margin-right: 250px;
+        }
+
+        #loginbutton {
+            padding: 20px;
+            margin: 20px;
+
+
+        }
+
+      
+
+
+        .d {
+            margin-top: 600px;
+            background-color: #f2f2f2;
+            
+            margin-left: 8px;
+            margin-right: 8px;
+            padding: 200px;
+        }
+
+        .e {
+            font-size: 20px;
+        }
+
+        .f {
+            font-size: 20px;
+            background-color: rgb(202, 225, 223);
+            padding: 50px;
+            text-align: center;
+        }
+
+        .h {
+            padding: 100px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .button-33 {
+            margin: 20px;
+        }
+
+        .fa-brands {
+            margin: 5px;
+        }
+
+
+        /*internal css end*/
+    </style>
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div  class="head_top">
+            <div class="header">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                           <div class="center-desk">
+                              <div class="logo">
+                                <a class="nav-link" href="/" style="color: #02fee5;"> E-Bus Pass </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                           <span class="navbar-toggler-icon"></span>
+                           </button>
+                           <div class="collapse navbar-collapse" id="navbarsExample04">
+                              <ul class="navbar-nav mr-auto">
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="/"> Home  </a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="/driver">DriverDetails</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="/about">About</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="/">Contact</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- end header inner -->
+            <!-- end header -->
+       
+
+<script src="https://kit.fontawesome.com/ef94d9cac3.js" crossorigin="anonymous"></script>
+    </div>
+
+    <section id="buttonss">
+
+        <div class="h">
+            <form action="/sturegis">
+
+                <button class="button-33" role="button">SignUp as Student</button> <br>
+                
+            </form>
+           
+           
+        </div>
+
+
+    </section>
+
+    <section id="footer">
+        <footer>
+
+
+
+            <div class="f">
+                <p>Copyright © 2022 E-Bus pass registration system </p>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+        </footer>
+    </section>
+
+</body>
+
+</html>

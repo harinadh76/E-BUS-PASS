@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bus Pass</title>
+    <link rel="icon" href="logo.jpg" type="image/gif"/>
+    
+
+   
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto+Mono:ital,wght@0,100;1,200&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .pricing-column {
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+        }
+
+        .card {
+            border: 2px solid #02fee5;
+            
+
+        }
+
+        .card-header {
+            background-color: #02fee5;
+           
+
+        }
+
+        .one {
+            transition: 1s;
+            box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+            text-align: center;
+
+        }
+
+        .one:hover {
+            transform: scale(1.3);
+            z-index: 2;
+        }
+
+        .two {
+            transition: 0.5s;
+
+            color: #fff;
+            text-shadow: 0 0 10px #02fee5,
+                0 0 10px #02fee5,
+                0 0 20px #02fee5,
+                0 0 30px #02fee5,
+                0 0 40px #02fee5;
+        }
+
+      
+        .card-body{
+            background-color: #163b55;
+        }
+        p{
+            color: white;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            text-shadow: 0 0 10px #163b55,
+                0 0 10px #163b55,
+                0 0 20px #163b55,
+                0 0 30px #163b55,
+                0 0 40px #163b55;
+            
+        }
+        img{
+            text-align: center;
+            border-radius: 50%;
+        }
+      
+        .card {
+            transition: 1s;
+            box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+            text-align: center;
+
+        }
+
+        .card:hover {
+            transform: scale(1.2);
+            z-index: 2;
+        }
+    </style>
+
+</head>
+
+<body>
+     <!-- header -->
+     <header>
+        <!-- header inner -->
+        <div  class="head_top">
+           <div class="header">
+              <div class="container-fluid">
+                 <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                       <div class="full">
+                          <div class="center-desk">
+                             <div class="logo">
+                               <a class="nav-link" href="/" style="color: #02fee5;"> E-Bus Pass </a>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                       <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarsExample04">
+                             <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                   <a class="nav-link" href="/"> Home  </a>
+                                </li>
+                                <li class="nav-item">
+                                   <a class="nav-link" href="/driver">DriverDetails</a>
+                                </li>
+                                <li class="nav-item">
+                                   <a class="nav-link" href="/about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                   <a class="nav-link" href="/">Contact</a>
+                                </li>
+                             </ul>
+                          </div>
+                       </nav>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <!-- end header inner -->
+           <!-- end header -->
+
+    <section id="driver">
+
+        <h1 class="two" style="text-align: center; margin: 20px;"> Driver Details</h1>
+        <div class="row">
+          
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><%= driver.id %></h3>
+                    </div>
+                    <div class="card-body">
+                        <img class="one" src="bus11.jpg" width="70px" alt="driver">
+                        <p><%= driver.name %></p>
+                        <p><%= driver.busno %></p>
+                        <p><%= driver.phone %></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Driver 2</h3>
+                    </div>
+                    <div class="card-body">
+                        <img class="one" src="bus11.jpg" width="70px" alt="driver">
+                        <p>Name:Mr.Raju</p>
+                        <p>Bus no:AP31-TD-6102</p>
+                        <p>Phone no:8795423212</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Driver 3</h3>
+                    </div>
+                    <div class="card-body">
+                        <img class="one" src="bus11.jpg" width="70px" alt="driver">
+                        <p>Name:Mr.Satti Babu</p>
+                        <p>Bus no:AP31-TD-7092</p>
+                        <p>Phone no:9866615289</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Driver 4</h3>
+                    </div>
+                    <div class="card-body">
+                        <img class="one" src="bus11.jpg" width="70px" alt="driver">
+                        <p>Name:Mr.Yellaji</p>
+                        <p>Bus no:AP31-TD-6051</p>
+                        <p>Phone no:9177306387</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Driver 5</h3>
+                    </div>
+                    <div class="card-body">
+                        <img class="one" src="bus11.jpg" width="70px" alt="driver">
+                        <p>Name:Mr.Appala Naidu</p>
+                        <p>Bus no:AP31-TD-7182</p>
+                        <p>Phone no:9400327134</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Driver 6</h3>
+                    </div>
+                    <div class="card-body">
+                        <img class="one" src="bus11.jpg" width="70px" alt="driver">
+                        <p>Name:Mr.Pydi Raju</p>
+                        <p>Bus no:AP31-TD-7089</p>
+                        <p>Phone no:6309657133</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Driver 7</h3>
+                    </div>
+                    <div class="card-body">
+                        <img class="one" src="bus11.jpg" width="70px" alt="driver">
+                        <p>Name:Mr.Krishna</p>
+                        <p>Bus no:AP31-TD-7181</p>
+                        <p>Phone no:8309067504</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Driver 8</h3>
+                    </div>
+                    <div class="card-body">
+                        <img class="one" src="bus11.jpg" width="70px" alt="driver">
+                        <p>Name:Mr.Nooka Raju</p>
+                        <p>Bus no:AP31-TD-6102</p>
+                        <p>Phone no:9866615432</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Driver 9</h3>
+                    </div>
+                    <div class="card-body">
+                        <img class="one" src="bus11.jpg" width="70px" alt="driver">
+                        <p>Name :Mr.shankarao</p>
+                        <p>Bus no:AP39-Tc-2027</p>
+                        <p>Phone no:9177205289</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+</body>
+
+</html>

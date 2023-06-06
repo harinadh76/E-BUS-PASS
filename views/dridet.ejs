@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+        <title>E-Bus Pass</title>
+        <link rel="icon" href="logo.jpg" type="image/gif"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 500px) {
+            body {
+               
+                min-height: 100vh;
+                align-items: center;
+            }
+        }
+
+        .heading {
+            color: #3c385c;
+            margin-top: 50px;
+        }
+
+        main.table {
+            width: 98vw;
+            height: 90vh;
+
+
+            box-shadow: 0 0.4rem 0.8rem #0005;
+            border-radius: 0.8rem;
+            overflow: hidden;
+        }
+
+        .table_header {
+            width: 100%;
+            height: 10%;
+
+           
+            color: #3c385c;
+            padding: 0.8rem 1rem;
+        }
+
+        .table_body {
+            width: 95%;
+            max-height: calc(89% - 0.8rem);
+            margin: 0.8rem auto;
+            border-radius: 0.6rem;
+            overflow: auto;
+        }
+
+        .table_body::-webkit-scrollbar {
+
+            border-radius: 0.5rem;
+            background-color: #0004;
+            visibility: hidden;
+        }
+
+        .table_body:hover::-webkit-scrollbar-thumb {
+            visibility: visible;
+        }
+
+        table {
+            width: 100%;
+            background-color: aquamarine;
+        }
+
+        td img {
+            margin-right: 0.5rem;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        table,
+        th,
+        td {
+            padding: 1rem;
+            border-collapse: collapse;
+            text-align: left;
+
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            left: 0;
+            color: white;
+            background-color: #3c385c;
+        }
+
+        
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+   
+    <center>
+        <h1 class="heading">Driver's Details</h1>
+    </center>
+    <section class="table_body">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>Bus No.</th>
+                    <th>Phone</th>
+                    <th>Route</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0;i<data.length;i++) {%>
+                <tr>
+                    <td><%=data[i].id%></td>
+                    <td><img src="<%=data[i].photo%>" width="70px"></td>
+                    <td><%=data[i].name%></td>
+                    <td><%=data[i].busno%></td>
+                    <td><%=data[i].phone%></td>
+                    <td><%=data[i].route%></td>
+                </tr>
+                <%} %>
+                
+                </tr> 
+
+            </tbody>
+        </table>
+    </section>
+
+    
+</body>
+
+</html>
