@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.98.0">
-    <title>E-Bus Pass</title>
+    <title>E-Bus Pass -Login</title>
     <link rel="icon" href="logo.jpg" type="image/gif"/>
 
     <!-- CSS only -->
@@ -77,7 +77,8 @@
             align-items: center;
             padding-top: 40px;
             padding-bottom: 40px;
-            background-color: #f5f5f5;
+            background-image:linear-gradient(to right,#393a61,#6cebd5);
+           
         }
 
         .form-signin {
@@ -100,6 +101,18 @@
             border-top-left-radius: 0;
             border-top-right-radius: 0;
         }
+        #subbtn{
+            background-color: #fff;
+            color: #393a61;
+        
+        }
+        #subbtn:hover{
+            background-color: #393a61;
+            color: #fff;
+        }
+        #heading{
+            color: #fff;
+        }
     </style>
 
 
@@ -111,7 +124,7 @@
     <main class="form-signin w-100 m-auto">
         <form action="/studentlog" name="f1" method="POST">
 
-            <h1 class="h3 mb-3 fw-normal">Login as student</h1>
+            <h1 class="h3 mb-3 fw-normal" id="heading">Login as student</h1>
 
             <div class="form-floating">
                 <input type="text" class="form-control" id="floatingInput" placeholder="email" name="email">
@@ -123,7 +136,7 @@
             </div>
 
 
-            <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="fun()">Log in</button>
+            <button class="w-100 btn btn-lg btn" id="subbtn" type="submit" onclick="fun()">Log in</button>
 
         </form>
     </main>

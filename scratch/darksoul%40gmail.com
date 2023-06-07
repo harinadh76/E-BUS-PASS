@@ -1,1 +1,0 @@
-{"_id":"647b68b4407c09282e3682fc","username":"darksoul","email":"darksoul@gmail.com","password":"$2a$12$rS2hh5SVEBHvBvPqkMFbv.oqe7ErqBS9a2rMFR/6eAp6jfE3oZbp.","__v":0}
