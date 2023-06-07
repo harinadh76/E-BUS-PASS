@@ -456,15 +456,20 @@ app.post("/downloadPass",(req,res)=>{
     .then((data)=>{
         console.log(data);
         if(!data){
-            var q=0;
-            return res.render("BusRegistration",{q:q})
+            // var q=0;
+            // return res.render("BusRegistration",{q:q})
+            res.render('reject.ejs')
            
         }
-        if(data.isAvailable==false || data.isAvailable == null){
-            return res.send("<html><body><p>Your Bus Pass is not verified by Admin / Management!!!</p><a href='/'>Back to Home</a></body></html>")
+        else if(data.isAvailable==false || data.isAvailable == null){
+            return res.render("notverified")
+            // return res.send("<html><body><p>Your Bus Pass has not been  verified by Admin / Management!!! Please check after some time</p><a href='/'>Back to Home</a></body></html>")
+        }
+        else{
+             res.render("BusPass",{data:data})
         }
 
-        res.render("BusPass",{data:data})
+       
     })
 })
 

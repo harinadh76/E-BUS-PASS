@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
   <!-- site metas -->
-  <title>E-Bus Pass</title>
+  <title>E-Bus Pass -Pass Registration</title>
   <link rel="icon" href="logo.jpg" type="image/gif" />
   <meta name="keywords" content="" />
   <meta name="description" content="" />
@@ -33,7 +33,7 @@
 <!-- body -->
 
 <body>
-  <% if (q==0) { %>
+  <!-- <% if (q==0) { %>
     <script>
       swal({
         title: "Sorry!",
@@ -42,7 +42,7 @@
       });
       q = 1
     </script>
-    <% } %>
+    <% } %> -->
       <div class="contact" id="contact">
         <div class="container">
           <div class="row">
@@ -82,8 +82,8 @@
                     </div>
 
                     <div class="col-md-12">
-                      <select id="Year" name="year" class="form_contril">
-                        <option value="SELECT ONE">Year</option>
+                      <select id="Year" name="year"  class="form_contril" required>
+                        <option value="">Year</option>
                         <option value="year1">1st year</option>
                         <option value="year2">2nd year</option>
                         <option value="year3">3rd year</option>
@@ -92,8 +92,8 @@
                     </div>
 
                     <div class="col-md-12">
-                      <select id="Branch" name="branch" class="form_contril">
-                        <option value="SELECT ONE">Branch</option>
+                      <select id="Branch" name="branch" class="form_contril" required>
+                        <option value="">Branch</option>
                         <option value="CSE">CSE</option>
                         <option value="CIVIL">CIVIL</option>
                         <option value="MECHANICAL">MECHANCICAL</option>
@@ -105,8 +105,8 @@
                     </div>
 
                     <div class="col-md-12">
-                      <select id="Route" name="route" class="form_contril">
-                        <option value="SELECT ONE">Route</option>
+                      <select id="Route" name="route"  class="form_contril" required>
+                        <option value="">Route</option>
                         <option value="Hanumanthawaka">Hanumanthawaka</option>
                         <option value="Seethamadhara">Seethamadhara</option>
                         <option value="Jagadhama">Jagadhama</option>
@@ -118,8 +118,8 @@
                     </div>
 
                     <div class="col-md-12">
-                      <select id="Route" name="busno" class="form_contril">
-                        <option value="SELECT ONE">Bus Number</option>
+                      <select id="Route" name="busno" class="form_contril" required>
+                        <option value="">Bus Number</option>
 
                         <option value="AP39-TC-2027">AP39-TC-2027</option>
                         <option value="AP31-TD-7090">AP31-TD-7090</option>
