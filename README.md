@@ -14,8 +14,7 @@ E-Bus pass Registration and Renewal is useful for the students who are facing pr
 
 ## Installation
 
-Install Finder Desk
-
+Install E-Bus Pass application
 ```bash
   git clone https://github.com/harinadh76/E-BUS-PASS.git
 ```
