@@ -37,19 +37,37 @@ Install Finder Desk
 
 Home Page
 
-![Home]()
-
-Events Dashboard
-
-![events]()
-
-User Registering for an Event
+![Home](https://github.com/harinadh76/E-BUS-PASS/assets/92932442/cf4ab331-c6e7-40f9-8699-ff29bbb03268)
 
 
-Admin Panel (All CRUD Operations)
-![admin]()
+Driver details Page
+
+![driver](https://github.com/harinadh76/E-BUS-PASS/assets/92932442/3805e038-767c-477b-ac46-35804b44294a)
 
 
+Student Registering for Bus Pass
+
+
+![register](https://github.com/harinadh76/E-BUS-PASS/assets/92932442/a5ca1ea2-de64-419a-beb4-bd23ee25fd4a)
+
+Renew for new Pass
+
+![renew](https://github.com/harinadh76/E-BUS-PASS/assets/92932442/1ebd456f-16c9-45d4-9a3b-a1b709f7849b)
+
+
+Admin Panel (All Operations)
+
+![admin](https://github.com/harinadh76/E-BUS-PASS/assets/92932442/77ec659f-1e3f-4836-816f-95086d65d61c)
+
+Admin (View all Registrations)
+
+
+![accept](https://github.com/harinadh76/E-BUS-PASS/assets/92932442/d198fab2-241c-4e14-ba62-a649f35925e8)
+
+Bus Pass 
+
+
+![buspass](https://github.com/harinadh76/E-BUS-PASS/assets/92932442/88922bd0-ec8e-43e1-8c10-32a5ce4cc63e)
 
 
 ## To Access Admin Panel
